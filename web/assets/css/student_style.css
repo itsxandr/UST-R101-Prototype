@@ -1,0 +1,117 @@
+/* ============ STUDENT PROFILE STYLES ============ */
+
+/* Page Background */
+body {
+    background-color: #FFFBE6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Headers */
+.section-header {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #D67828;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    border-bottom: 3px solid #F7C843;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Profile Info */
+.profile-header { text-align: center; margin-bottom: 40px; }
+.profile-avatar {
+    width: 120px; height: 120px; background-color: #888;
+    border-radius: 50%; margin: 0 auto 15px; border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.welcome-text { font-size: 2.5rem; font-weight: 800; margin-bottom: 5px; }
+.student-badge {
+    background: white; border: 1px solid #ccc; padding: 4px 12px;
+    border-radius: 20px; font-size: 0.85rem; color: #666;
+    text-transform: uppercase; letter-spacing: 1px;
+}
+
+/* Info Card */
+.info-card {
+    background: white; max-width: 600px; margin: 0 auto 30px;
+    padding: 40px; border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.info-row {
+    display: flex; justify-content: space-between;
+    margin-bottom: 12px; font-size: 1rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;
+}
+.info-label { font-weight: 700; color: #222; }
+.info-value { color: #555; }
+
+/* Logout */
+.logout-btn-container { text-align: center; margin-top: 30px; margin-bottom: 60px; }
+.btn-black {
+    background: #222; color: white; border: none; padding: 12px 40px;
+    font-weight: 800; border-radius: 8px; cursor: pointer; letter-spacing: 1px; transition: 0.3s;
+}
+.btn-black:hover { background: #000; transform: translateY(-2px); }
+
+/* Horizontal App Cards */
+.app-card {
+    background: white; border-radius: 15px; padding: 25px;
+    display: flex; align-items: center; gap: 25px;
+    margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+.app-logo {
+    width: 120px; height: 120px; object-fit: cover;
+    border-radius: 10px; background: #f4f4f4; flex-shrink: 0;
+}
+.app-details { flex: 1; }
+.app-org-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 5px; }
+.app-tag {
+    color: #F7C843; font-weight: 800; font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block;
+}
+.app-meta-row { font-size: 0.9rem; margin-bottom: 5px; color: #555; }
+
+/* Status Colors */
+.status-interview { color: #007bff; font-weight: 700; }
+.status-progress { color: #D67828; font-weight: 700; }
+.status-accepted { color: #28a745; font-weight: 700; }
+.req-complete { color: #28a745; font-weight: 700; }
+.req-missing { color: #dc3545; font-weight: 700; }
+
+/* Buttons */
+.app-actions { display: flex; flex-direction: column; gap: 10px; min-width: 180px; }
+.btn-gold-sm {
+    background: #F7C843; color: #111; border: none; padding: 10px;
+    border-radius: 20px; font-weight: 700; cursor: pointer; text-align: center;
+}
+.btn-outline-sm {
+    background: white; border: 1px solid #999; padding: 8px;
+    border-radius: 20px; font-weight: 600; cursor: pointer; text-align: center; color: #333;
+}
+.btn-see-more {
+    width: 100%; border: 2px solid #F7C843; background: transparent;
+    color: #D67828; font-weight: 700; padding: 10px; margin-top: 10px; cursor: pointer;
+}
+
+/* Recommended Grid (Shared look) */
+.rec-grid { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; }
+.rec-card {
+    min-width: 280px; background: white; border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; padding-bottom: 20px;
+}
+.rec-img-container {
+    height: 180px; position: relative; background: #333;
+    display: flex; align-items: center; justify-content: center;
+}
+.rec-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+.rec-body { padding: 15px; }
+.rec-title { font-weight: 800; margin-bottom: 10px; font-size: 1.1rem; }
+.rec-desc { font-size: 0.8rem; color: #666; margin-bottom: 15px; line-height: 1.4; }

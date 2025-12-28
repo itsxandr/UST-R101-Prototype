@@ -1,0 +1,19 @@
+# NetBeans specific
+nbproject/private/
+build/
+dist/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Compiled class files
+*.class
+*.war
+*.ear
+*.nar
+*.jar
+
+# OS specific
+.DS_Store
+Thumbs.db

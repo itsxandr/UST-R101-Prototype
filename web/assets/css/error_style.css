@@ -1,0 +1,137 @@
+/* ===================== FONTS ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ===================== PAGE SETUP ===================== */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    /* Yellow to White Gradient Background */
+    background: linear-gradient(135deg, #FFC731 0%, #FFFBE6 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ===================== ERROR CARD CONTAINER ===================== */
+.error-card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 950px; 
+    padding: 60px;
+    border-radius: 22px;
+    
+    /* Side-by-Side Layout */
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    gap: 60px; 
+    
+    box-shadow: 0px 15px 50px rgba(166, 122, 0, 0.15); 
+    position: relative;
+    border-top: 8px solid #FFC731; /* Gold Top Border */
+}
+
+/* ===================== LEFT SIDE: TIGER/ICON ===================== */
+.card-left-tiger {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-left-tiger img {
+    width: 100%;
+    max-width: 320px; 
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.1));
+}
+
+/* ===================== RIGHT SIDE: TEXT ===================== */
+.card-right-text {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* ===================== TYPOGRAPHY ===================== */
+.outside-header {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.1; /* Faint background number */
+    z-index: -1;
+}
+
+.big-error-code {
+    font-size: 12rem;
+    font-weight: 900;
+    margin: 0;
+    color: #000;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.error-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* ===================== BUTTON ===================== */
+.home-btn {
+    display: inline-block;
+    background: #FFC731;
+    color: #111;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: 2px solid #FFC731;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.home-btn:hover {
+    background: transparent;
+    color: #D67828;
+    border-color: #D67828;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(214, 120, 40, 0.2);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 850px) {
+    .error-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .card-right-text {
+        align-items: center;
+        text-align: center;
+    }
+    .card-left-tiger img {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+    .big-error-code { font-size: 8rem; }
+}

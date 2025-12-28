@@ -1,0 +1,288 @@
+/* ===================== FONTS ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===================== GLOBAL TITLES ===================== */
+.section-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 900;
+    margin: 40px 0 25px;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-shadow: 0px 3px 12px rgba(0,0,0,0.45);
+}
+
+/* ===================== GOLD BACKGROUND ===================== */
+.all-orgs-section {
+    padding: 40px 0 80px;
+    background-image: url("media/gold_bg.jpg");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.all-orgs-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 199, 49, 0.35) 0%,
+        rgba(231, 178, 53, 0.30) 30%,
+        rgba(183, 127, 28, 0.55) 70%,
+        rgba(0, 0, 0, 0.90) 100%
+    );
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.all-orgs-section * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===================== GRID ===================== */
+.org-grid {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px;
+}
+
+
+/* ===================== ORG CARD ===================== */
+.org-card {
+    background: white;
+    color: black;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+    transition: 0.25s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.org-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 16px 35px rgba(0,0,0,0.5);
+}
+
+/* ===================== IMAGE WRAPPER ===================== */
+.org-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.org-image-wrapper .org-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Category tag */
+.org-category {
+    background: rgba(0,0,0,0.85);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.org-image-wrapper .org-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+/* ===================== CARD CONTENT ===================== */
+.org-info {
+    padding: 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.org-name {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.org-description {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #444;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+/* ===================== MEMBERS ===================== */
+.org-members {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.member-icon {
+    width: 18px;
+    opacity: 0.8;
+}
+
+/* ===================== STATUS ===================== */
+.org-status {
+    font-size: 14px;
+    font-weight: 400;      
+    color: #777;           
+    display: block;
+    margin-bottom: 18px;
+}
+
+
+.status-open {
+    color: #28c76f;
+    font-weight: 600;  
+}
+
+.status-closed {
+    color: #d9534f;
+    font-weight: 600;   
+}
+
+
+/* ===================== VIEW DETAILS BUTTON ===================== */
+.view-details-btn {
+    width: 100%;
+    background: #FFC731;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.view-details-btn:hover {
+    background: #F5B712;
+    transform: scale(1.02);
+}
+
+.view-details-btn::after {
+    content: "➜";
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: auto;
+}
+
+/* ===================== CATEGORY CARDS (TOP SECTION) ===================== */
+.categories-section {
+    padding: 40px 0;
+}
+
+.categories-container {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 26px 24px;
+}
+
+.category-card {
+    width: 320px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 0 0 25px 0;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform .25s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 18px rgba(0,0,0,0.25);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cat-img-wrapper {
+    width: 100%;
+    height: 160px;       
+    overflow: hidden;     
+}
+
+.cat-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cat-title {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #D67828; /* ORANGE */
+    letter-spacing: 1px;
+}
+
+.cat-divider {
+    width: 70%;
+    height: 1.5px;
+    background-color: #c9c9c9;
+    margin: 12px auto 18px auto;
+}
+
+.cat-desc {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.45;
+    padding: 0 25px;
+    color: #555;
+}

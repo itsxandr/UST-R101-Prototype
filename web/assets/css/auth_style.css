@@ -1,0 +1,99 @@
+/* ============ LOGIN SPECIFIC STYLES ============ */
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(27, 27, 27, 0.95);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 450px;
+    max-width: 90%;
+    border-top: 5px solid #F7C843;
+}
+
+/* Input Fields Styling */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: #F7C843; /* Gold border on focus */
+}
+
+.input-group .icon {
+    padding: 15px;
+    background: #eee;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Button Styling */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background: #F7C843; /* Gold */
+    color: #111;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: #d4a01e;
+    transform: translateY(-2px);
+}
+
+/* Extras */
+.form-footer {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-pass {
+    color: #ccc;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+.forgot-pass:hover { color: #F7C843; }
+
+.back-link {
+    color: #888;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+.back-link:hover { color: white; }
+
+/* Error Box */
+.error-msg {
+    background: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    border: 1px solid #cc0000;
+}

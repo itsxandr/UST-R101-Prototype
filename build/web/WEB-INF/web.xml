@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>com.ustr101.AuthServlet</servlet-class>
+        
+        <!-- Usage of ServletConfig: Init Param for this specific servlet -->
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+    </servlet>
+
+    <!-- Usage of ServletContext: Global Param for whole app -->
+    <context-param>
+        <param-name>universityName</param-name>
+        <param-value>University of Santo Tomas</param-value>
+    </context-param>
+
+    <!-- Map the Login URL -->
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/auth/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- Map the Logout URL -->
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/auth/logout</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Error Page Mappings -->
+    <!-- 1. Page Not Found -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errors/404.jsp</location>
+    </error-page>
+
+    <!-- 2. Access Denied (Triggered by non-UST email) -->
+    <error-page>
+        <error-code>403</error-code>
+        <location>/errors/403.jsp</location>
+    </error-page>
+
+    <!-- 3. Server Error (Triggered by "crash" password) -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/errors/500.jsp</location>
+    </error-page>
+
+    <!-- 4. Generic Exception (Triggered by "throw" password) -->
+    <error-page>
+        <!-- This catches any other Java error not caught by 500 -->
+        <exception-type>java.lang.Throwable</exception-type> 
+        <location>/errors/generic_error.jsp</location>
+    </error-page>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file> <!-- To have a 2nd one defined -->
+    </welcome-file-list>
+</web-app>
